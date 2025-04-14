@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.className} min-h-screen bg-background text-foreground`}
-      >
+      <body className={`${poppins.className} min-h-screen `}>
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1 container mx-auto py-6 px-4">{children}</main>
