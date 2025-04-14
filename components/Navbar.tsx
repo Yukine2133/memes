@@ -4,22 +4,31 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
   Link,
 } from "@heroui/react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export function Navbar() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <HeroUINavbar className="border-b border-gray-700 px-4 h-16">
+    <HeroUINavbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="border-b  border-gray-700 px-4 h-16"
+    >
       <NavbarBrand>
         <Link href="/" className="text-white font-bold text-xl">
           Meme Directory
         </Link>
       </NavbarBrand>
 
-      <NavbarContent className="gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex  gap-4" justify="center">
         <NavbarItem isActive={pathname === "/"}>
           <Link
             href="/"
@@ -45,6 +54,34 @@ export function Navbar() {
           </Link>
         </NavbarItem>
       </NavbarContent>
+
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
+
+      {/* Mobile Menu Items */}
+      <NavbarMenu className="sm:hidden flex flex-col pt-16 items-center space-y-4 ">
+        <NavbarMenuItem isActive={pathname === "/"}>
+          <Link
+            href="/"
+            className="block bg-[#7c3aed] w-[140px] text-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700"
+            onPress={() => setIsMenuOpen(false)}
+          >
+            Table View
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem isActive={pathname === "/list"}>
+          <Link
+            href="/list"
+            className="block bg-[#7c3aed] w-[140px] text-center px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700"
+            onPress={() => setIsMenuOpen(false)}
+          >
+            List View
+          </Link>
+        </NavbarMenuItem>
+      </NavbarMenu>
     </HeroUINavbar>
   );
 }

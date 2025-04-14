@@ -55,7 +55,7 @@ export function EditMemeModal({
                 type="text"
                 value={meme.id.toString()}
                 isDisabled
-                className="bg-[#2d2241] py-2 h-[40px] border-[#3b2c56] text-white  "
+                className="bg-[#2d2241]  border-[#3b2c56] text-white  "
               />
             </div>
             <div>
@@ -67,7 +67,7 @@ export function EditMemeModal({
                 value={formValues.name}
                 onChange={(e) => handleChange("name", e.target.value)}
                 isInvalid={!!errors.name}
-                className="bg-[#2d2241] py-2 h-[40px]  text-white border-[#3b2c56] "
+                className="bg-[#2d2241]   text-white border-[#3b2c56] "
                 classNames={{
                   input: "outline-none ",
                 }}
@@ -83,7 +83,7 @@ export function EditMemeModal({
                 value={formValues.image}
                 onValueChange={(value) => handleChange("image", value)}
                 isInvalid={!!errors.image}
-                className="bg-[#2d2241] py-2 h-[40px] border-[#3b2c56] text-white "
+                className="bg-[#2d2241]  border-[#3b2c56] text-white "
                 classNames={{
                   input: "outline-none ",
                 }}
@@ -103,7 +103,7 @@ export function EditMemeModal({
                   handleChange("likes", Number.parseInt(value) || 0)
                 }
                 isInvalid={!!errors.likes}
-                className="bg-[#2d2241] py-2 h-[40px] border-[#3b2c56] text-white "
+                className="bg-[#2d2241]  border-[#3b2c56] text-white "
                 classNames={{
                   input: "outline-none ",
                 }}
