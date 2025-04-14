@@ -16,62 +16,72 @@ export type Meme = z.infer<typeof memeSchema>;
 const defaultMemes: Meme[] = [
   {
     id: 1,
-    name: "Distracted Boyfriend",
-    image: "https://i.imgur.com/QYuRyK5.jpg",
+    name: "Imagine if ninja had a low taper fade",
+    image:
+      "https://i1.sndcdn.com/artworks-mab0d6ZtmkGuPfVo-M7Q3JA-t500x500.jpg",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 2,
-    name: "Drake Hotline Bling",
-    image: "https://i.imgur.com/dCWPL3s.jpg",
+    name: "Bombardiro Crocodilo",
+    image:
+      "https://i.kym-cdn.com/entries/icons/mobile/000/053/420/Bombardiro_crocodilo_cover.jpg",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 3,
-    name: "Two Buttons",
-    image: "https://i.imgur.com/7hyKWGq.jpg",
+    name: "Tralalero Tralala",
+    image:
+      "https://i.kym-cdn.com/entries/icons/mobile/000/053/192/tralalero_tral.jpg",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 4,
-    name: "Change My Mind",
-    image: "https://i.imgur.com/LkfZiZV.jpg",
+    name: "I Just Want to Be Part of Your Symphony",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-11.50.38%E2%80%AFAM.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 5,
-    name: "Expanding Brain",
-    image: "https://i.imgur.com/xfZrAEP.jpg",
+    name: "The Military Man",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-12.04.58%E2%80%AFPM.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 6,
-    name: "Woman Yelling at Cat",
-    image: "https://i.imgur.com/hNVK2TT.jpg",
+    name: "Pepe the King Prawn",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-12.12.06%E2%80%AFPM.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 7,
-    name: "Surprised Pikachu",
-    image: "https://i.imgur.com/u4N9QFv.jpg",
+    name: "Chill guy",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-12.32.43%E2%80%AFPM.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 8,
-    name: "Is This a Pigeon",
-    image: "https://i.imgur.com/RZ6ZCjm.jpg",
+    name: "Lebron James Sunshine or “Le-sunshine”",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-12.42.40%E2%80%AFPM.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 9,
-    name: "Disaster Girl",
-    image: "https://i.imgur.com/oQQDSH9.jpg",
+    name: "Two steps ahead",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-1.08.43%E2%80%AFPM-1-600x573.png",
     likes: Math.floor(Math.random() * 100),
   },
   {
     id: 10,
-    name: "Doge",
-    image: "https://i.imgur.com/2jEmGX5.jpg",
+    name: "What's up, brother",
+    image:
+      "https://www.bu.edu/files/2024/12/Screenshot-2024-12-13-at-12.53.48%E2%80%AFPM.png",
     likes: Math.floor(Math.random() * 100),
   },
 ];
