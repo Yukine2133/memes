@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { type Meme, getMemes, updateMeme } from "@/lib/memes";
 import {
   Table,
   TableHeader,
@@ -10,29 +8,19 @@ import {
   TableRow,
   TableCell,
   Button,
-  useDisclosure,
 } from "@heroui/react";
 import { EditMemeModal } from "./EditMemeModal";
+import { useMemeTable } from "@/hooks/useMemeTable";
 
 export function MemeTable() {
-  const [memes, setMemes] = useState<Meme[]>(getMemes());
-  const [selectedMeme, setSelectedMeme] = useState<Meme | null>(null);
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const handleEditClick = (meme: Meme) => {
-    setSelectedMeme(meme);
-    onOpen();
-  };
-
-  const handleSaveMeme = (updatedMeme: Meme) => {
-    updateMeme(updatedMeme);
-    setMemes(getMemes());
-    onClose();
-
-    // Show a notification
-    alert(`"${updatedMeme.name}" has been updated successfully.`);
-  };
-
+  const {
+    memes,
+    selectedMeme,
+    isOpen,
+    onClose,
+    handleEditClick,
+    handleSaveMeme,
+  } = useMemeTable();
   return (
     <div className="space-y-4">
       <h1 className="text-3xl font-bold">Meme Directory - Table View</h1>
