@@ -1,7 +1,12 @@
+import { MemeTable } from "@/components/memes/MemeTable";
 import React from "react";
 
-const Home = () => {
-  return <div>Home</div>;
+const TableViewPage = () => {
+  return (
+    <div>
+      <MemeTable />
+    </div>
+  );
 };
 
-export default Home;
+export default TableViewPage;
