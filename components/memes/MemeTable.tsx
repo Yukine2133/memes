@@ -12,7 +12,7 @@ import {
   Button,
   useDisclosure,
 } from "@heroui/react";
-// import { EditMemeModal } from "@/components/edit-meme-modal";
+import { EditMemeModal } from "./EditMemeModal";
 
 export function MemeTable() {
   const [memes, setMemes] = useState<Meme[]>(getMemes());
@@ -76,14 +76,14 @@ export function MemeTable() {
         </Table>
       </div>
 
-      {/* {selectedMeme && (
+      {selectedMeme && (
         <EditMemeModal
           meme={selectedMeme}
           isOpen={isOpen}
           onClose={onClose}
           onSave={handleSaveMeme}
         />
-      )} */}
+      )}
     </div>
   );
 }
