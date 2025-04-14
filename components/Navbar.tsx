@@ -20,14 +20,14 @@ export function Navbar() {
         </Link>
       </NavbarBrand>
 
-      <NavbarContent className=" gap-4" justify="center">
+      <NavbarContent className="gap-4" justify="center">
         <NavbarItem isActive={pathname === "/"}>
           <Link
             href="/"
             className={
               pathname === "/"
-                ? "text-foreground bg-gray-900 px-3 py-2 rounded-md"
-                : "text-gray-300 hover:text-foreground hover:bg-gray-700 px-3 py-2 rounded-md"
+                ? "text-white bg-[#7c3aed] px-3 py-2 rounded-md shadow-md"
+                : "text-[#a78bfa] hover:text-white hover:bg-[#4c1d95] px-3 py-2 rounded-md transition-colors"
             }
           >
             Table View
@@ -38,8 +38,8 @@ export function Navbar() {
             href="/list"
             className={
               pathname === "/list"
-                ? "text-foreground bg-gray-900 px-3 py-2 rounded-md"
-                : "text-gray-300 hover:text-foreground hover:bg-gray-700 px-3 py-2 rounded-md"
+                ? "text-white bg-[#7c3aed] px-3 py-2 rounded-md shadow-md"
+                : "text-[#a78bfa] hover:text-white hover:bg-[#4c1d95] px-3 py-2 rounded-md transition-colors"
             }
           >
             List View

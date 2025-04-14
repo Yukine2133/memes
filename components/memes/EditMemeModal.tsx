@@ -36,7 +36,7 @@ export function EditMemeModal({
       isOpen={isOpen}
       onClose={onClose}
       classNames={{
-        base: "bg-[#1a1325] text-white h-fit my-auto",
+        base: "bg-[#1a1325] py-2 text-white h-fit my-auto",
         backdrop: "bg-black/70 backdrop-blur-sm ",
         header: "border-b border-[#2d2241]",
         body: "py-6",
@@ -55,7 +55,7 @@ export function EditMemeModal({
                 type="text"
                 value={meme.id.toString()}
                 isDisabled
-                className="bg-[#2d2241] py-2 h-[40px] border-[#3b2c56] text-white "
+                className="bg-[#2d2241] py-2 h-[40px] border-[#3b2c56] text-white  "
               />
             </div>
             <div>
@@ -117,14 +117,14 @@ export function EditMemeModal({
             color="default"
             variant="flat"
             onPress={onClose}
-            className="bg-[#3b2c56] text-white hover:bg-[#4c3a6d]"
+            className="bg-[#3b2c56] text-white hover:bg-[#4c3a6d] cursor-pointer rounded-md"
           >
             Cancel
           </Button>
           <Button
             color="primary"
             onPress={handleSubmit}
-            className="bg-[#7c3aed] text-white hover:bg-[#6d28d9]"
+            className="bg-[#7c3aed] text-white hover:bg-[#6d28d9] cursor-pointer rounded-md"
           >
             Save changes
           </Button>

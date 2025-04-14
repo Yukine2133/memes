@@ -8,5 +8,13 @@ export const IsClient = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     setIsClient(true); // Ensures code is only executed on the client side
   }, []);
-  return <>{isClient ? <div> {children} </div> : null}</>;
+  return (
+    <>
+      {isClient ? (
+        <div> {children} </div>
+      ) : (
+        <p className="text-center text-purple-500 text-2xl">Loading...</p>
+      )}
+    </>
+  );
 };
